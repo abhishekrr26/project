@@ -1,0 +1,23 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{% block title %}Apple Clone{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'store/style.css' %}">
+</head>
+<body>
+<header>
+    <h1>Apple Clone Store</h1>
+    <nav>
+        <a href="/">Home</a>
+        <a href="/accounts/login/">Login</a>
+        <a href="/signup/">Signup</a>
+        <a href="/profile/">Profile</a>
+    </nav>
+</header>
+<main>
+    {% block content %}{% endblock %}
+</main>
+<footer>&copy; 2026 Apple Clone</footer>
+</body>
+</html>

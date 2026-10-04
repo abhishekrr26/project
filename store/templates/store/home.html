@@ -1,0 +1,20 @@
+{% extends 'store/base.html' %}
+{% block title %}Home{% endblock %}
+{% block content %}
+<div class="banner">
+    {% for banner in banners %}
+        <img src="{{ banner.image.url }}" alt="{{ banner.title }}">
+        <h2>{{ banner.title }}</h2>
+        <p>{{ banner.content }}</p>
+    {% endfor %}
+</div>
+<h3>Featured Products</h3>
+<div class="products">
+    {% for product in products %}
+        <a href="{% url 'product_detail' product.id %}">
+            <img src="{{ product.image.url }}" alt="{{ product.name }}">
+            <p>{{ product.name }} - ₹{{ product.price }}</p>
+        </a>
+    {% endfor %}
+</div>
+{% endblock %}
