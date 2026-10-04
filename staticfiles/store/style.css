@@ -1,0 +1,4 @@
+body { font-family: Arial; margin: 0; padding: 0; }
+header, footer { background: #333; color: white; padding: 10px; }
+nav a { margin: 0 10px; color: white; text-decoration: none; }
+.products img { width: 150px; }
